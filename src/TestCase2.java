@@ -26,7 +26,7 @@ public class TestCase2 {
 
 	// printng output
 	public static void printMax(Float x, Float y, Float z, Float max) {
-		System.out.printf("Given input %s %s %s \nMaximum Number is : %s", x, y, z, max);
+		System.out.printf("\nGiven input %s %s %s \nMaximum Number is : %s", x, y, z, max);
 
 	}
 
