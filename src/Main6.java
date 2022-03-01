@@ -1,23 +1,26 @@
 
-public class Main5<T extends Comparable<T>> {
+public class Main6<T extends Comparable<T>> {
 	public T x, y, z;
 
-	public Main5(T x, T y, T z) {
+	public Main6(T x, T y, T z) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static <T extends Comparable<T>> void TestCase5(T... arr) { // constructor
+	public static <T extends Comparable<T>> T TestCase5(T... arr) { // constructor
 		T max = arr[0];
 		for (int i = 1; i < arr.length; i++) { // looping till array length
 			if (arr[i].compareTo(max) > 0) {
 				max = arr[i]; // high value store in max
 			}
-			System.out.print(" " + arr[i]);
 		}
+		printMax(max);
+		return max;
+	}
 
-		System.out.println("\nMaximum value is :" + max + "\n");
+	public static <T> void printMax(T max) { // print max Generic method
+		System.out.println("\nMaximum is  " + max);
 	}
 
 	public static void main(String[] args) {
